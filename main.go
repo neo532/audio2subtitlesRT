@@ -122,6 +122,7 @@ func main() {
 	logger := nls.NewNlsLogger(os.Stderr, "test", log.LstdFlags|log.Lmicroseconds)
 	logger.SetLogSil(false)
 	logger.SetDebug(false)
+
 	st, err := nls.NewSpeechTranscription(config, logger,
 		onTaskFailed, onStarted,
 		onSentenceBegin, onSentenceEnd, onResultChanged,
